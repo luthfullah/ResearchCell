@@ -1,0 +1,116 @@
+/* Header Section */
+.intro {
+    display: table;
+    width: 100%;
+    padding: 0;
+    background: linear-gradient(
+        to right, 
+        rgba(0, 0, 0, 0.8), /* Left side, darker black */
+        rgba(0, 0, 0, 0.4) /* Right side, lighter black */
+      ),
+      url(./intro-bg.jpg) center center no-repeat;
+     /* background-color: gray; */
+     height: 00px;
+    background-size: cover;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  
+  .intro .overlay {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  .intro h1 {
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .intro h1 span {
+    font-weight: 800;
+    color: #5ca9fb;
+  }
+  
+  .intro p {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  
+  header .intro-text {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+  }
+  
+  /* Media Queries for Small and Medium Screens */
+  @media (max-width: 991px) {
+    .intro {
+      background-size: cover;
+      background-position: top center;
+    }
+    
+    .intro h1 {
+      font-size: 36px;
+    }
+  
+    .intro p {
+      font-size: 18px;
+    }
+  
+    header .intro-text {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .intro {
+      background-size: cover;
+      background-position: center center;
+    }
+  
+    .intro h1 {
+      font-size: 28px;
+    }
+  
+    .intro p {
+      font-size: 16px;
+    }
+  
+    header .intro-text {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .intro h1 {
+      font-size: 24px;
+    }
+  
+    .intro p {
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+  
+    header .intro-text {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+  #nav_Bar {
+    background-color: #333;
+    color: #fff;
+    padding: 0.3rem 0;
+  }
+  

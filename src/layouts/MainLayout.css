@@ -1,0 +1,26 @@
+/* MainLayout.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the root elements fill the viewport */
+  }
+  
+  .main-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  .content {
+    flex: 1; /* Take up all available space between Navbar and Footer */
+    padding: 1rem; /* Optional: Add padding for the content area */
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  

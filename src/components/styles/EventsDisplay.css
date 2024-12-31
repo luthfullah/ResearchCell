@@ -1,0 +1,21 @@
+.bg-primary-50 {
+    background-color: #e3f2fd; /* Light shade of primary */
+  }
+  
+  .bg-light-50 {
+    background-color: #f8f9fa; /* Slightly lighter than light */
+  }
+  
+  .disp_eve_bg {
+    background-color: #ffffff; /* Light gray background */
+    padding: 2rem; /* Adds padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    overflow: hidden; /* Ensures that elements inside the container don't overflow */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  }
+  
+  .disp_eve_bg:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  }
+  
