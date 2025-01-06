@@ -19,8 +19,9 @@ export default function VideoPage() {
 
   return (
     <div className="shadow-lg disp_eve_bg bg-light">
-      <Container className="py-2">
-        <Row className="bg-white rounded shadow-lg overflow-hidden">
+        {/* <div className='container '> */}
+      <div className=" container disp_eve_bg ">
+        <Row className="">
           {/* Video Thumbnail Section */}
           <Col md={6} className="p-4">
             <div className="position-relative overflow-hidden" style={{ height: '100%', aspectRatio: '16 / 9' }}>
@@ -43,8 +44,8 @@ export default function VideoPage() {
 
           {/* Video Details Section */}
           <Col md={6} className="p-4 d-flex flex-column justify-content-center">
-            <h1 className="text-dark fw-bold mb-3">{video.title}</h1>
-            <p className="text-secondary mb-4" style={{ display: '-webkit-box', WebkitLineClamp: 5, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+            <h1 className="text-dark fw-bold mb-3 fontTitle">{video.title}</h1>
+            <p className="text-secondary mb-4 font-primary" style={{ display: '-webkit-box', WebkitLineClamp: 5, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
               {video.description}
             </p>
             <Button
@@ -55,7 +56,7 @@ export default function VideoPage() {
             </Button>
           </Col>
         </Row>
-      </Container>
+      </div>
 
       {/* Modal for Video */}
       <Modal show={showModal} onHide={handleCloseModal} size="lg" centered>
@@ -73,6 +74,7 @@ export default function VideoPage() {
           </div>
         </Modal.Body>
       </Modal>
+      {/* </div> */}
     </div>
   );
 }

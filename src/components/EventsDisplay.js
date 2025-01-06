@@ -3,9 +3,8 @@
 import React, { useState } from "react";
 import { Card, Button, Tab, Tabs } from "react-bootstrap";
 import moment from "moment";
-import "../components/styles/EventsDisplay.css"
+import "../components/styles/EventsDisplay.css";
 import { useNavigate } from "react-router-dom";
-
 const upcomingEvents = [
   {
     id: "1",
@@ -13,7 +12,8 @@ const upcomingEvents = [
     date: new Date("2024-06-15"),
     time: "09:00 AM",
     location: "Convention Center",
-    description: "Annual tech conference featuring the latest innovations.Annual tech conference featuring the latest innovations.Annual tech conference featuring the latest innovations.Annual tech conference featuring the latest innovations.",
+    description:
+      "Annual tech conference featuring the latest innovations.Annual tech conference featuring the latest innovations.Annual tech conference featuring the latest innovations.Annual tech conference featuring the latest innovations.",
     imageUrl: "/Picture2.png",
   },
   {
@@ -92,25 +92,31 @@ const pastEvents = [
 
 function EventsDisplay() {
   const [activeTab, setActiveTab] = useState("upcoming");
- 
 
   return (
     <div className="container shadow-lg disp_eve_bg">
-      <h1 className=" font-bold mb-8 text-center text-dark fs-3">Event Calendar</h1>
+      <h1 className=" font-bold fontTitle mb-4 text-center text-dark fs-3">
+        Event Calendar
+      </h1>
       <Tabs
         activeKey={activeTab}
         onSelect={(k) => setActiveTab(k)}
-        className="mb-3 w-100"
-        // style={{ width: "100%" }} 
-        variant="underline"
-        
+        className="mb-3  nav-fill"
+        // style={{ width: "100%" }}
+        variant="tabs"
       >
-        
-        <Tab className="w-100 text-light" eventKey="upcoming"  title={<span className="text-black">Upcoming Events</span>}>
-          <EventList  events={upcomingEvents} type="upcoming"  />
+        <Tab
+          className="w-100 "
+          eventKey="upcoming"
+          title={<span className="fontTitle">Upcoming Events</span>}
+        >
+          <EventList events={upcomingEvents} type="upcoming" />
         </Tab>
-        <Tab eventKey="past" title={<span className="text-black" >Past Events</span>}>
-          <EventList events={pastEvents} type="past"   />
+        <Tab
+          eventKey="past"
+          title={<span className="fontTitle">Past Events</span>}
+        >
+          <EventList events={pastEvents} type="past" />
         </Tab>
       </Tabs>
     </div>
@@ -122,24 +128,23 @@ function EventList({ events, type }) {
     <div className="row">
       {events.map((event) => (
         <div key={event.id} className="col-12 col-md-6 col-lg-4 mb-4">
-          <EventCard event={event} type={type}  />
+          <EventCard event={event} type={type} />
         </div>
       ))}
     </div>
   );
 }
 
-function EventCard({ event, type ,}) {
-    const navigate = useNavigate();
-    const [isLoading, setIsLoading] = useState(false);
-    const handleViewDetails = () => {
-            setIsLoading(true); 
-            setTimeout(() => {
-                setIsLoading(false);
-                navigate(`/event/${event.id}`, { state: { event } }); 
-              }, 1000);
-  
-      };
+function EventCard({ event, type }) {
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+  const handleViewDetails = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate(`/event/${event.id}`, { state: { event } });
+    }, 1000);
+  };
   return (
     <Card className={`border-${type === "upcoming" ? "primary" : "secondary"}`}>
       <div
@@ -153,10 +158,11 @@ function EventCard({ event, type ,}) {
           height={200}
           layout="fill"
           className="card-img-top"
-        
         />
       </div>
-      <Card.Body className={`${type === 'upcoming' ? 'bg-primary-50' : 'bg-light-50'}`}>
+      <Card.Body
+        className={`${type === "upcoming" ? "bg-primary-50" : "bg-light-50"}`}
+      >
         <Card.Title className="text-truncate">{event.title}</Card.Title>
         <Card.Text>
           <small className="text-muted">
@@ -166,15 +172,15 @@ function EventCard({ event, type ,}) {
             <strong>Location:</strong> {event.location}
           </small>
         </Card.Text>
-        <Card.Text className="text-truncate">{event.description}</Card.Text>
+        <Card.Text className="text-truncate fontTitle">{event.description}</Card.Text>
         {/* <Button variant={type === "upcoming" ? "primary" : "secondary"} onClick={handleViewDetails}>
           View Details
         </Button> */}
-         <Button
-         variant={type === "upcoming" ? "primary" : "secondary"}
+        <button
+          variant={type === "upcoming" ? "custom-but" : "lightGreen"}
           onClick={handleViewDetails}
-          className="btn btn-primary"
-          disabled={isLoading} // Disable Button while loading
+          className="custom-but"
+          disabled={isLoading} // Disable button while loading
         >
           {isLoading ? (
             <span>
@@ -182,13 +188,13 @@ function EventCard({ event, type ,}) {
                 className="spinner-border spinner-border-sm"
                 role="status"
                 aria-hidden="true"
-              ></span>{' '}
+              ></span>{" "}
               Loading...
             </span>
           ) : (
-            'View Details'
+            "View Details"
           )}
-        </Button>
+        </button>
       </Card.Body>
     </Card>
   );

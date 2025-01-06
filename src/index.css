@@ -12,12 +12,63 @@ body {
 
 
 code {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
 }
 .font-primary {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
 }
+
 .fontTitle {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+}
+.container{
+  border: 1px solid #dbdbdb;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+.contai{
+  border: 1px solid #dbdbdb;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.lightGreen{
+  background-color: #f3f7f5;
+}
+.custom-button {
+  align-items: center;
+  background-color: #009952; /* Green color */
+  border-radius: 7px; /* All corners rounded */
+  box-sizing: border-box; /* Ensures padding and borders are included in width/height */
+  color: rgb(255, 255, 255); /* White text */
+  cursor: pointer; /* Pointer cursor on hover */
+ border: #009952;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif; /* Font family */
+  font-size: 14.38px; /* Font size */
+  height: 36.0156px; /* Button height */
+  line-height: 18.837px; /* Line height */
+  margin-right: 8.19px; /* Right margin */
+  padding: 8.19px 16.38px; /* Top/Bottom and Left/Right padding */
+  text-decoration: none; /* Remove underline */
+  width: 100.656px; /* Fixed width */
+  -webkit-font-smoothing: antialiased; /* Smoothing for webkit browsers */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Optional transition for hover effect */
+}
+
+.custom-button:hover {
+  background-color: #009952; /* Slightly darker green on hover */
+  transform: scale(1.05); /* Subtle zoom on hover */
+  font-weight: bolder;
+}
+
+.btn-outline-primary {
+  border-color: #009952 !important; /* Green border color */
+  color: #009952 !important; /* Green text color */
+}
+
+.btn-outline-primary:hover {
+  background-color: #009952 !important; /* Green background on hover */
+  color: white !important; /* White text on hover */
+  border-color: #009952 !important; /* Keep the green border on hover */
 }
 

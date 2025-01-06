@@ -12,7 +12,7 @@ const PdfCard = ({ title, author, date, onView, fileUrl }) => {
         <p className="card-text text-muted small">
           By {author} | {new Date(date).toLocaleDateString()}
         </p>
-        <button onClick={onView} className="btn btn-primary w-100">
+        <button onClick={onView} className="custom-button w-100">
           View PDF
         </button>
       </div>

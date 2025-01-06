@@ -16,14 +16,14 @@ const Header = (props) => {
     <header id="header">
       <div className="intro">
         <div className="overlay">
-          <div className="container ">
+          <div className="containerr ">
             <div className="row">
               <div className="col-md-12 col-md-offset-2 intro-text">
-                <h1 className="fs-5">
+                <h1 className="fs-5 fontTitle" >
                   {props.data ? props.data.title : "Loading"}
                   <span></span>
                 </h1>
-                <p>{props.data ? props.data.paragraph : "Loading"}</p>
+                <p >{props.data ? props.data.paragraph : "Loading"}</p>
                 {/* <a
                 
                 className="text-primary btn-lg"
@@ -32,7 +32,7 @@ const Header = (props) => {
                 Learn More
               </a> */}
                 <a
-                  className=" btn-lg bg-white rounded p-1"
+                  className="custom-button"
                   onClick={handleClick}
                   style={{ textDecoration: "none", cursor: "pointer" }}
                 >

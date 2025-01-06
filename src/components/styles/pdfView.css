@@ -1,0 +1,22 @@
+.nav-tabs .nav-link {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-tabs .nav-link:hover {
+    background-color: #f3f7f5; /* Lighter green for hover effect */
+    color: #030303;
+  }
+  
+  .nav-tabs .nav-link.active {
+    background-color: #009952 !important; /* Ensure this takes precedence */
+    color: #fff !important; /* Ensure this takes precedence */
+    border-color: #009952 !important; /* Ensure this takes precedence */
+  }
+.bg_green{
+    background-color: rgba(0, 153, 82, 0.2);
+    
+}  
+  
